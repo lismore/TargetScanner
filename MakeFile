@@ -12,3 +12,4 @@ TargetScanner: TargetScanner.cpp Makefile
 
 clean:
 	$(RM) $(ALL) *.o
+	
