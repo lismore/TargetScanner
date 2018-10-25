@@ -4,7 +4,7 @@ ALL = targetscanner
 
 all: $(ALL)
 
-targetscanner: TargetScanner/TargetScanner.cpp Makefile
+targetscanner: /TargetScanner/TargetScanner.cpp Makefile
 	$(CXX) $(CXXFLAGS) -o $@ $@.cpp
 
 clean:
