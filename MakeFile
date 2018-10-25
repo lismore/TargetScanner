@@ -1,0 +1,17 @@
+# Travis for Modern C++ by Patrick Lismore
+# https://github.com/lismore/TargetScanner#readme
+
+CXXFLAGS = -g -Wall -Wfatal-errors -std=c++14
+
+ALL = TargetScanner
+
+all: $(ALL)
+
+TargetScanner: TargetScanner.cpp Makefile
+	$(CXX) $(CXXFLAGS) -o $@ $@.cpp
+
+clean:
+	$(RM) $(ALL) *.o
+
+test: all
+	bash test
