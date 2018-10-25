@@ -7,8 +7,8 @@ all: $(ALL)
 TargetScanner.exe: TargetScanner.o
 	gcc -o TargetScanner.exe TargetScanner.o $(CXXFLAGS)
 	
-TargetScanner.o: TargetScanner.cpp
-	 gcc -c TargetScanner/TargetScanner.cpp
+TargetScanner.o: TargetScanner/TargetScanner.cpp
+	 gcc -c TargetScanner.cpp
 
 clean:
 	$(RM) $(ALL) *.o
