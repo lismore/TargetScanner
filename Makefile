@@ -1,13 +1,14 @@
 CXXFLAGS = -g -Wall -Wfatal-errors -std=c++14
 
-SRCS = $(wildcard TargetScanner/*.cpp)
-
-ALL = targetscanner
+ALL = TargetScanner.exe
 
 all: $(ALL)
 
-targetscanner: TargetScanner.cpp Makefile
-	$(SRCS:%.cpp:%.o) $(CXXFLAGS)
+TargetScanner.exe: TargetScanner.o
+	gcc -o TargetScanner.exe TargetScanner.o $(CXXFLAGS)
+	
+TargetScanner.o: TargetScanner/TargetScanner.cpp
+	 gcc -c hello.cpp
 
 clean:
 	$(RM) $(ALL) *.o

@@ -1,11 +1,18 @@
-langauge: cpp
-sudo: required
-dist: trusty
-
+sudo: false
+language: cpp
+compiler:
+  - gcc
+  - clang
 addons:
   apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise-3.8
     packages:
-      - libusb-1.0-0-dev
-
+    - g++-6
+    - clang-3.8
+install:
+- "[ $CXX = g++ ] && export CXX=g++-6 || true"
+- "[ $CXX = clang++ ] && export CXX=clang++-3.8 || true"
 script:
   - make
