@@ -13,5 +13,5 @@ TargetScanner: TargetScanner.cpp Makefile
 clean:
 	$(RM) $(ALL) *.o
 
-test: all
-	bash test
+#test: all
+	#bash test
