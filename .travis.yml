@@ -1,18 +1,17 @@
-sudo: false
+sudo: required
+dist: trusty
 language: cpp
-compiler:
-  - gcc
-  - clang
+compiler: g++
+install: export CXX="g++-5"
 addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise-3.8
     packages:
-    - g++-6
-    - clang-3.8
-install:
-- "[ $CXX = g++ ] && export CXX=g++-6 || true"
-- "[ $CXX = clang++ ] && export CXX=clang++-3.8 || true"
-script:
-  - make
+    - g++-5
+notifications:
+ email:
+  on_success: never
+  on_failure: always
+before_install: sudo apt-get update -qq
+script: make --directory "Var & ReadOnly C++"
