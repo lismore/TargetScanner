@@ -35,61 +35,40 @@ void OSDetect() {
 }
 /*
 
-Function Name	: End
-
-Description		: This terminates the application
-
-*/
-void Exit() {
-
-	exit(0);
-}
-/*
-
-Function Name	: PrintMenu
-
-Description		: This displays a menu in the console application
-
-*/
-void PrintMenu()
-{
-	int userChoice = 0;
-
-	std::cout << "\n********** Target Scanner Menu **********\n" << std::endl;
-	std::cout << "(1): Dump All\n" << std::endl;
-	std::cout << "(2): Quick Audit\n" << std::endl;
-	std::cout << "(3): OS Detect\n" << std::endl;
-	std::cout << "(4): Exit\n" << std::endl;
-	std::cout << "\n*****************************************" << std::endl;
-	std::cin >> userChoice;
-
-	switch (userChoice)
-	{
-	case 1:
-		DumpAll();
-		break;
-	case 2:
-		QuickAudit();
-		break;
-	case 3:
-		OSDetect();
-		break;
-	case 4:
-		Exit();
-		break;
-	default:
-		std::cout << "ERROR! You have selected an invalid choice." << std::endl;
-		break;
-	}
-}
-/*
-
 Target Scanner: Main Function
 
 */
 int main()
 {
-	while (true) { PrintMenu(); }
-	system("pause");
+  int userChoice = 0;
+
+	do {
+  
+		std::cout << "\n********** Target Scanner Menu **********\n" << std::endl;
+		std::cout << "(1): Dump All\n" << std::endl;
+		std::cout << "(2): Quick Audit\n" << std::endl;
+		std::cout << "(3): OS Detect\n" << std::endl;
+		std::cout << "(4): Exit\n" << std::endl;
+		std::cout << "\n*****************************************" << std::endl;
+		std::cin >> userChoice;
+
+		switch (userChoice) {
+		case 1:
+		  DumpAll();
+		  break;
+		case 2:
+		  QuickAudit();
+		  break;
+		case 3:
+		  OSDetect();
+		  break;
+		case 4:
+		  break;
+		default:
+		  std::cout << "ERROR! You have selected an invalid choice." << std::endl;
+		  break;
+		}
+  
+	}while (userChoice != 4);
     return 0;
 }
