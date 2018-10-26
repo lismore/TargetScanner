@@ -1,14 +1,12 @@
-CXXFLAGS = -g -Wall -Wfatal-errors -std=c++14
+makefile:
 
-ALL = TargetScanner.exe
-
-all: $(ALL)
-
-TargetScanner.exe: TargetScanner.o
-	gcc -o TargetScanner.exe TargetScanner.o $(CXXFLAGS)
+all: targetscanner
 	
-TargetScanner.o: TargetScanner/TargetScanner.cpp
-	 gcc -c TargetScanner/TargetScanner.cpp
+targetscanner: targetscanner.o
+	 g++ -g -o targetscanner TargetScanner.o
+
+targetscanner.o: TargetScanner/TargetScanner.cpp
+	 g++ -c -g TargetScanner/TargetScanner.cpp
 
 clean:
 	$(RM) $(ALL) *.o
