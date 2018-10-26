@@ -1,6 +1,6 @@
 # Target Scanner
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Build Status](https://travis-ci.org/lismore/TargetScanner.svg?branch=master)](https://travis-ci.org/lismore/TargetScanner)
 
 Target Scanner is a penetration testing utility that quickly automates common tasks when assessing a target.
 
