@@ -1,5 +1,3 @@
-#pragma once
-
 void DumpAll();
 void QuickAudit();
 void OSDetect();
