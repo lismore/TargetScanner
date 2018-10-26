@@ -1,4 +1,4 @@
-CXXFLAGS = -g -Wall -Wfatal-errors -std=c++1y
+CXXFLAGS = -g -Wall -Wfatal-errors -std=c++14
 
 ALL = TargetScanner.exe
 
